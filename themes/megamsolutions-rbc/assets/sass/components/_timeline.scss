@@ -1,0 +1,156 @@
+.main-timeline1 {
+  overflow: hidden;
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  &:before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: $color-grey-dark-1;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+  }
+
+  .timeline {
+    width: 50%;
+    float: left;
+    padding-right: 3rem;
+    position: relative;
+
+    &:nth-child(2n) {
+      padding: 0 0 0 3rem;
+
+      .timeline-icon {
+        right: auto;
+        left: -14.5px;
+        border-color: $color-timeline-2;
+      }
+
+      .year {
+        border-radius: 5rem 0 0 5rem;
+        background: $color-timeline-2;
+
+        &:before {
+          border-left: none;
+          border-right: 3.5rem solid transparent;
+          left: auto;
+          right: 0;
+          border-top-color: $color-timeline-2-light;
+        }
+      }
+
+      .timeline-content {
+        text-align: right;
+        margin: 0 3.5rem 0 4.5rem;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 17rem;
+    }
+
+    &:nth-child(odd) {
+      margin: -12rem 0 0;
+    }
+
+    &:nth-child(even) {
+      margin-bottom: 9rem;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &:last-child:nth-child(even) {
+      margin-bottom: 3rem;
+    }
+
+    &:nth-child(3n) {
+      .timeline-icon {
+        border-color: $color-timeline-3;
+      }
+
+      .year {
+        background: $color-timeline-3;
+        &:before {
+          border-top-color: $color-timeline-3-light;
+        }
+      }
+    }
+
+     &:nth-child(4n) {
+      .timeline-icon {
+        border-color: $color-timeline-4;
+      }
+
+      .year {
+        background: $color-timeline-4;
+        &:before {
+          border-top-color: $color-timeline-4-light;
+        }
+      }
+    }
+
+  }
+
+  .timeline-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    background: $color-white;
+    border: 3px solid $color-timeline-1;
+    position: absolute;
+    top: 5.5%;
+    right: -17.5px;
+  }
+
+  .year {
+    display: block;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+    color: $color-white;
+    border-radius: 0 5rem 5rem 0;
+    background: $color-timeline-1;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      border-top: 2.9rem solid $color-timeline-1-light;
+      border-left: 2.9rem solid transparent;
+      position: absolute;
+      bottom: -2.9rem;
+      left: 0;
+    }
+  }
+
+  .timeline-content {
+    padding: 2.5rem 2rem;
+    margin: 0 4rem 0 2.9rem;
+    background: $color-grey-light-1;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-grey-dark-1;
+    margin: 0 0 10px;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: $color-grey-dark-2;
+    margin: 0;
+  }
+}

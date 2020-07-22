@@ -1,0 +1,161 @@
+{{ define "main" }}
+
+<section class="hero-section overflow-hidden">
+  {{ with .Site.Data.homepage.hero }}
+  <div class="container carousel">
+    <div class="row">
+      <div class="col-12 js-hero-slider">
+        {{ range .slides }}
+        <div class="carousel__item">
+          <div class="carousel__item--heading">{{.title}}</div>
+          <div class="carousel__item--desc">
+            {{.description}}
+          </div>
+          <a href="{{.link}}" class="btn btn--red btn--animated">Learn More</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <div class="hero-section__parallax" data-relative-input="true" id="parallax">
+    <div class="hero__shape shape-1" data-depth="0.10">
+      <img src="{{`images/illustrations/gamma.png` | relURL }}" alt="gamma" />
+    </div>
+    <div class="hero__shape shape-2" data-depth="0.10">
+      <img src="{{`images/illustrations/beta.png` | relURL }}" alt="beta" />
+    </div>
+    <div class="hero__shape shape-3" data-depth="0.10">
+      <img src="{{`images/illustrations/zeta.png` | relURL }}" alt="zeta" />
+    </div>
+    
+    <div class="hero__shape shape-4" data-depth="0.15">
+      <img
+        src="{{`images/illustrations/epsilon.png` | relURL }}"
+        alt="epsilon"
+      />
+    </div>
+    <div class="hero__shape shape-5" data-depth="0.15">
+      <img src="{{`images/illustrations/eta.png` | relURL }}" alt="eta" />
+    </div>
+    <div class="hero__shape shape-6" data-depth="0.15">
+      <img src="{{`images/illustrations/alpha.png` | relURL }}" alt="alpha" />
+    </div>
+    <div class="hero__shape shape-7" data-depth="0.15">
+      <img src="{{`images/illustrations/lambda.png` | relURL }}" alt="lambda" />
+    </div>
+    <div class="hero__shape shape-8" data-depth="0.20">
+      <img src="{{`images/illustrations/pi.png` | relURL }}" alt="pi" />
+    </div>
+    <div class="hero__shape shape-9" data-depth="0.25">
+      <img src="{{`images/illustrations/sigma.png` | relURL }}" alt="sigma" />
+    </div>
+    <div class="hero__shape shape-10" data-depth="0.20">
+      <img src="{{`images/illustrations/theta.png` | relURL }}" alt="theta" />
+    </div>
+    <div class="hero__shape shape-11" data-depth="0.25">
+      <img
+        src="{{`images/illustrations/integral.png` | relURL }}"
+        alt="integral"
+      />
+    </div>
+    <div class="hero__shape shape-12" data-depth="0.25">
+      <img src="{{`images/illustrations/delta.png` | relURL }}" alt="delta" />
+    </div>
+  </div>
+</section>
+<section class="section-event u-margin-bottom-medium">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">News</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <img src="https://source.unsplash.com/random/200x100" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">News</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
+              </div>
+            </div>            
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <img src="https://source.unsplash.com/random/200x100" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">News</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+         <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="card">
+              <img src="https://source.unsplash.com/random/220x100" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">News</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
+              </div>
+            </div>            
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <img src="https://source.unsplash.com/random/220x100" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">News</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Events</h2>
+          <div class="main-timeline1">
+            <div class="timeline">
+              <span class="timeline-icon"></span>
+              <span class="year">10 Jul 2020, 2:00 PM</span>
+              <div class="timeline-content">
+                <h3 class="title">Workshop</h3>
+                <p class="description">
+                  Seventh RBCDSAI Workshop on Recent Progress in Data Science and AI
+                </p>
+              </div>
+            </div>
+            <div class="timeline">
+              <span class="timeline-icon"></span>
+              <span class="year">18th Jun 2020, 2:15 PM</span>
+              <div class="timeline-content">
+                <h3 class="title">Summit</h3>
+                <p class="description">
+                  International Summit on Data Science & AI
+                </p>
+              </div>
+            </div>
+            <div class="timeline">
+              <span class="timeline-icon"></span>
+              <span class="year">12th Jun 2020, 5:00 PM</span>
+              <div class="timeline-content">
+                <h3 class="title">Seminar</h3>
+                <p class="description">
+                  RBCDSAI AImpact Seminar Series
+                </p>
+              </div>
+            </div>
+            <div class="timeline">
+              <span class="timeline-icon"></span>
+              <span class="year">30th Jan 2020, 9:00 AM</span>
+              <div class="timeline-content">
+                <h3 class="title">Symposium</h3>
+                <p class="description">
+                  India|EMBO Symposium - Engineering meets evolution: Designing biological systems ICSR Auditorium, IIT Madras
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+{{ end }}
