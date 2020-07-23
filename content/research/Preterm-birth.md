@@ -15,6 +15,5 @@ draft: false
 {{< figure src=" /images/research/flagship-img.jpg" >}}
 
 
-Preterm birth risk in pregnant women - prediction using machine learning models
-Data analysis of GARBH-Ini project to predict preterm birth in the Indian population
-preterm birth in the Indian population
+Complications associated with a premature birth include immature lungs, difficulty regulating body temperature, poor feeding and slow weight gain.
+Premature babies may need longer or more intense nursery care, medication and sometimes surgery.

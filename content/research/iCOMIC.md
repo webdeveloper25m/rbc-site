@@ -13,5 +13,6 @@ draft: false
 
 {{< figure src="/images/research/iCOMIC.png" >}}
 
+The rapid advancement in next-generation technology has made a tremendous impact on genome-based research
+We are interested in understanding the multi-tissue communication 
 
-The rapid advancement in next-generation technology has made a tremendous impact on genome-based research. Analysis of the large amount of data generated can be tricky as it demands expertise in bioinformatics 
