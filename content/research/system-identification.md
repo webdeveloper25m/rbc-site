@@ -1,7 +1,7 @@
 ---
 title: "System Identification"
 date: 2020-07-21T14:40:35+05:30
-tags: [multi-tissue""]
+tags: [multi-tissue]
 categories: ["Basic Research"]
 authors: "Arun Tangirala"
 name: "arun-tangirala"
