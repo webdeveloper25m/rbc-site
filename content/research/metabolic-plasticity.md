@@ -1,9 +1,10 @@
 ---
 title: "Metabolic Plasticity"
 date: 2020-07-21T14:42:07+05:30
-tags: [""]
+tags: ["metabolic networks"]
 categories: ["Projects"]
-Author: ""
+authors: "Gayathri S"
+name: "gayathri-s"
 images:
   - /images/research/metabolic-plasticity.png
 draft: false

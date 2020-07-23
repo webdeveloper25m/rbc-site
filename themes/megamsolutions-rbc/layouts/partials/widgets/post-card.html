@@ -1,26 +1,5 @@
 
 {{ $permalink := .Permalink }}
-
- <!-- <div class="card-deck mt-5">
-  <div class="card h-60">
-    <div class="card-image">
-        <figure>
-            {{ with .Params.images }}
-            <a href="{{ $permalink }}"><img src="{{ index . 0 }}" alt="" class="card-img-top img-fluid"></a>
-            {{ end }}
-        </figure>
-    </div>
-    <div class="card-body">
-        <h5> <a class="card-title" href="{{ .Permalink }}">{{ .Title }}</a></h5>
-        <div class="card-text">
-            {{ .Summary }}
-        </div>
-        <br>
-      </div>
-    </div>
-  </div>-->
-
-
   <div class="card-deck mt-5">
   <div class="card">
             {{ with .Params.images }}
@@ -28,9 +7,9 @@
             {{ end }}
 
     <div class="card-body">
-         <div class="tags d-inline-block">
+         <div class="d-inline-block">
     {{ range .Params.categories }}
-   <button class="btn btn--animated mb-1 "> <a class="category" href="/categories/{{ . | urlize}}">{{ . }}</a></button>
+   <button class="btn btn--animated mb-1"> <a class="category" href="/categories/{{ . | urlize}}">{{ . }}</a></button>
     {{ end }}
    </div>
      <h5> <a class="card-title" href="{{ .Permalink }}">{{ .Title }}</a></h5>
@@ -42,8 +21,18 @@
          {{- end -}}
         <br>
     </div>
-  </div>
-  
+   <!--- author--->
+  <p class="m-4"><a class="tag-link" href="/authors/{{ .Params.name }}/">{{ .Params.authors  }}</a></hp> 
+  <!---TAGS WITH CAMMA SEPARATOR--->
+  <div class="tag">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+ {{ range $i, $e := .Params.tags -}}
+ {{- if $i -}}, {{ end -}}
+    <a class="tag-link" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ $e | humanize }}</a>
+{{- end -}}
+
+</div>
+</div>
 </div>
 
 

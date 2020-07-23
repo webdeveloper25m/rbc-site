@@ -1,9 +1,10 @@
 ---
 title: "Clustering"
 date: 2020-07-21T14:38:56+05:30
-tags: [""]
+tags: ["cluster"]
 categories: ["Basic Research"]
-Author: ""
+authors: "Raghunathan Rengasamy"
+name: "raghunathan-rengasamy"
 images:
   - /images/research/clust_gene.png
 draft: false

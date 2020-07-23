@@ -2,9 +2,10 @@
 ---
 title: "ICOMIC"
 date: 2020-07-21T14:36:48+05:30
-tags: [""]
+tags: ["NGS","cancer","genomics","ML"]
 categories: ["Projects"]
-Author: ""
+authors: "Anjana Anilkumar S"
+name: "anjana-anilkumar-s"
 images:
   - /images/research/iCOMIC.png
 draft: false
@@ -13,5 +14,4 @@ draft: false
 {{< figure src="/images/research/iCOMIC.png" >}}
 
 
-Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication
-We are interested in understanding the multi-tissue communication. The project involves identifying genes that regulate multi-tissue interaction.
+The rapid advancement in next-generation technology has made a tremendous impact on genome-based research. Analysis of the large amount of data generated can be tricky as it demands expertise in bioinformatics 

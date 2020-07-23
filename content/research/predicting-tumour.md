@@ -1,9 +1,10 @@
 ---
 title: "Predicting Tumour"
 date: 2020-07-21T14:39:55+05:30
-tags: [""]
+tags: ["tumour"]
 categories: ["Advanced Research"]
-Author: ""
+authors: "Raghunathan Rengasamy"
+name: "raghunathan-rengasamy"
 images:
   - /images/research/research.jpg
 draft: false

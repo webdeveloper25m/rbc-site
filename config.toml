@@ -5,6 +5,7 @@ theme = "megamsolutions-rbc"
 paginate = 20
 summaryLength=20
 
+
 ############################## navigation ###############################
 
 [[menu.main]]
@@ -60,9 +61,10 @@ weight = 8
 #######################taxonomies#################################
 
 [taxonomies]
+  author = "authors"
   tag = "tags"
   category="categories"
-  mood="moods"
+  
 
 #################### default parameters ################################
 [params]

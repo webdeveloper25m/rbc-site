@@ -3,9 +3,10 @@
 ---
 title: "Predicting Protein"
 date: 2020-07-21T14:40:13+05:30
-tags: [""]
+tags: ["networks"]
 categories: ["Projects"]
-Author: ""
+authors: "Karthik Raman"
+name: "karthik-raman"
 images:
   - /images/research/predicting-protein.png
 draft: false

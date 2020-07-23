@@ -1,16 +1,17 @@
 ---
 title: "Disease Modules"
 date: 2020-07-21T14:41:22+05:30
-tags: [""]
+tags: ["networks"]
 categories: ["Projects"]
-Author: ""
+authors: "Gayathri S"
+name: "gayathri-s"
 images:
-  - /images/research/flagship-img.jpg
+  - /images/research/Identifi.png
 draft: false
 ---
 
-{{< figure src="/images/research/flagship-img.jpg" >}}
+{{< figure src="/images/research/Identifi.png" >}}
 
-
-Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication
-We are interested in understanding the multi-tissue communication. The project involves identifying genes that regulate multi-tissue interaction.
+Identification of Disease Modules: DREAM challenge
+Disease Module Identification was a part of DREAM challenge which was organized in late 2016 The objective of the challenge was crowdsourcing the community.
+The objective of the challenge was crowdsourcing the community 

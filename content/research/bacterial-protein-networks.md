@@ -2,9 +2,10 @@
 ---
 title: "Bacterial Protein Networks"
 date: 2020-07-21T14:39:23+05:30
-tags: [""]
+tags: ["synthetic biology"]
 categories: ["Basic Research"]
-Author: ""
+authors: "Karthik Raman"
+name: "karthik-raman"
 images:
   - /images/research/bacterial-protein-networks.png
 draft: false

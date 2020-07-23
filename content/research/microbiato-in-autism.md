@@ -3,9 +3,10 @@
 ---
 title: "Microbiato in Autism"
 date: 2020-07-21T14:44:48+05:30
-tags: [""]
+tags: ["autism","microbiome"]
 categories: ["Basic Research"]
-Author: ""
+authors: "Meghana Palukuri"
+name: "meghana-palukuri"
 images:
   - /images/research/microbiato-autism.png
 draft: false
@@ -13,6 +14,5 @@ draft: false
 
 {{< figure src="/images/research/microbiato-autism.png" >}}
 
-
-Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication
-We are interested in understanding the multi-tissue communication. The project involves identifying genes that regulate multi-tissue interaction.
+Role of gut microbiota in autism
+The Autism project is first of its kind, where in, hybrid modeling technique has been incorporated, integrating steady-state modeling

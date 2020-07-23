@@ -1,9 +1,10 @@
 ---
 title: "Single Cell Analysis"
 date: 2020-07-21T14:38:41+05:30
-tags: [""]
+tags: ["cell-analysis"]
 categories: ["Advanced Research"]
-Author: ""
+authors: "Karthik Raman"
+name: "karthik-raman"
 images:
   - /images/research/tsg-og.png
 draft: false

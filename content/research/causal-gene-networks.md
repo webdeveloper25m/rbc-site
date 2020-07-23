@@ -1,9 +1,10 @@
 ---
 title: "Causal Gene Networks"
 date: 2020-07-21T14:39:35+05:30
-tags: [""]
+tags: ["networks","ML"]
 categories: ["Advanced Research"]
-Author: ""
+authors: "Manikandan Narayanan"
+name: "manikandan-narayanan"
 images:
   - /images/research/causal-gene-networks.png
 draft: false

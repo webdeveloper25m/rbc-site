@@ -5,7 +5,8 @@
    margin-top: 4rem;
 
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/research-info.jpg');
+  background-image: linear-gradient(rgba($color-grey-dark-2, 0.8),
+      rgba($color-grey-dark-3, 0.8)), url('../images/hero-1.jpg');
 
   /* Set a specific height */
    width:100vw;
@@ -32,8 +33,12 @@
 }
 
 .fig-image{
-  
   max-width:100%;
+}
+
+.article-text{
+  font-family:sans-serif;
+  font-size:2rem;
 }
 
 
