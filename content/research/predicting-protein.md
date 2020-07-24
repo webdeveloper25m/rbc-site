@@ -12,7 +12,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/predicting-protein.png" >}}
+
 
 
 Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication

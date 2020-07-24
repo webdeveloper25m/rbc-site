@@ -30,30 +30,13 @@ i.fa {
 }
 
 .social-icon{
+  
   padding: 10px;
   font-size: 15px;
-  width: 30px;
+  width: 50px;
+  color: black;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
 }
 
-.fa-facebook {
-  background: #00BFFF;
-  color: $color-white;
-  font-size: 10px;
-}
-
-.fa-facebook:hover{
- text-decoration:none;
- color:red;
-}
-.fa-google{
-  background: #00BFFF;
-  color: $color-white;
-  font-size: 10px;
-}
-.fa-google:hover{
- text-decoration:none;
- color:red;
-}

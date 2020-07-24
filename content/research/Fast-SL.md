@@ -10,7 +10,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/macrophage.png" >}}
+
 
 
 Fast-SL: efficient enumeration of synthetic lethals in metabolic networks

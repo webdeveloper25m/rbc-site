@@ -9,9 +9,8 @@ images:
   - /images/research/tsg-og.png
 draft: false
 ---
+***
 
-{{< figure src="/images/research/tsg-og.png" >}}
+# **Single cell analysis for understanding infection in macrophages** #
 
-
-Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication
-We are interested in understanding the multi-tissue communication. The project involves identifying genes that regulate multi-tissue interaction.
+### Single cell experiments were carried out to see what morphological features help or inhibit infection of cells. The data contains cell features along with lysosome and bacterial intensities for single cells after infection. Further, different genes were silenced to study their effects on infection. ###

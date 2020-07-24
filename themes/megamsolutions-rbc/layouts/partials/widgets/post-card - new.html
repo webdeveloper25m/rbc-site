@@ -7,13 +7,8 @@
             {{ end }}
 
     <div class="card-body">
-         <div class="d-inline-block">
-    {{ range .Params.categories }}
-   <button class="btn btn--animated mb-1"> <a class="category" href="/categories/{{ . | urlize}}">{{ . }}</a></button>
-    {{ end }}
-   </div>
+         
      <h5> <a class="card-title" href="{{ .Permalink }}">{{ .Title }}</a></h5>
-         <p class="heading mb-2">{{ .Params.authors }} | <time>{{ .PublishDate.Format "January 2, 2006"}}</time></p>
         <div class="card-text">
             {{ .Summary }}
         </div>

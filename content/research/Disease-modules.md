@@ -10,7 +10,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/Identifi.png" >}}
+
 
 Identification of Disease Modules: DREAM challenge
 Disease Module Identification was a part of DREAM challenge which was organized in late 2016 The objective of the challenge was crowdsourcing the community.

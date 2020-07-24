@@ -11,7 +11,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/Network-Analysis-of-Protein.png" >}}
+
 
 
 Network Analysis of Protein Folding Pathways and novel regulators of tissue-tissue communication

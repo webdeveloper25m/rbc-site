@@ -10,7 +10,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/metabolic-plasticity.png" >}}
+
 
 
 Multilayer network centrality measures to identify known and novel regulators of tissue-tissue communication

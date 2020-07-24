@@ -2,11 +2,76 @@
 
 
 {{ define "main" }}
-<div class="container">
+<section class="research-single-section overflow-hidden mt-4">
+  <div class="container">
+    <div class="hero-text">
+    <h5 class="btn btn--animated">{{ .Title }}</h5>
+    {{ partial "widgets/single-breadcrumb.html" . }}
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-2">
+       <div class="social-icons">
+        <div class="icon-bar">
+          <span>  <a href="https://www.facebook.com" class="social-icon fa fa-facebook"></a></span>
+           <span> <a href="https://www.facebook.com" class="social-icon fa fa-google"></a></span>
+           <span> <a href="https://www.facebook.com" class="social-icon fa fa-twitter"></a></span>
+           <span> <a href="https://www.facebook.com" class="social-icon fa fa-linkedin"></a></span>
+           <span> <a href="https://www.facebook.com" class="social-icon fa fa-github"></a></span>
+       </div>
+      </div>
+      </div>
+      <div  class="col-10">
+       <div class="row mb-2">
+        <div class="col">
+          <h3 class="heading text-center mb-2"><time>{{ .PublishDate.Format "January 2, 2006"}}</time></h3>
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col">
+          <div class="author-text text-center">
+            <h1>{{ .Title }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col">
+          <h4 class="text-center heading mb-2"><b>{{ .Params.authors }}</b> </h4>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="card mt-5">
+            {{ with .Params.images }}
+            <a href=""><img src="{{ index . 0 }}" alt="" class="card-img-top img-fluid"></a>
+            {{ end }}
+          </div>
+          <div class="row">
+            <div class="col">
+               <aside>
+               <article class="article-text">
+               <div class="content">
+            {{.Content }}
+          </div>
+      </article>
+      </aside>
+      </div>
+       </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+      
+<!--<div class="container">
   <div class="row">
    <div class="col-4">
     <div class="card-dick">
-     <div class="card">
+     <div class="card mt-5">
             {{ with .Params.images }}
             <a href=""><img src="{{ index . 0 }}" alt="" class="card-img-top img-fluid"></a>
             {{ end }}
@@ -31,15 +96,17 @@
   </div>
   </div>
 </div>
-  <div class="col-6">
+  <div class="col-8">
       <aside>
         <article class="article-text">
-        {{ .Summary }}
+        <div class="content">
+            {{.Content }}
+          </div>
       </article>
       </aside>
 </div>
 </div>
-</div>
+</div>-->
 
 
 

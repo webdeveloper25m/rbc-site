@@ -1,54 +1,46 @@
 {{ define "main" }}
+
 <section class="research-section overflow-hidden mt-4">
 	<div class="container">
   	<div class="hero-text">
     <h5 class="btn btn--animated">Research</h5>
+    {{ partial "widgets/Breadcrumb.html" }}
+  </div>
 </section>
-
-<!--<div class="container">
-    <div class="section">
-        <a href="/categories/">Back to categories</a>
-        <div class="content">
-            <h1>Category: {{ .Title }}</h1>
-            
-        </div>
-       
-        <div class="row">
-            {{ range .Paginator.Pages }}
-            <div class="col-4">
-                {{ partial "widgets/post-card.html" . }}
-            </div>
-            {{ end }}
-        </div>
-    
-        <div class="columns">
-            <div class="column is-narrow">
-                {{ partial "widgets/pagination.html" . }}
-            </div>
-        </div>
-    </div>
-</div>-->
-<section class="section-event u-margin-bottom-medium">
+<section class="section mt-4">
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Research</h2>
-        <div class="row">
-        	{{ range .Paginator.Pages }}
-                 <div class="col-md-4">
-                {{ partial "widgets/post-card.html" . }}
-            </div>
-            {{ end }}
-           </div>
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="btn-group btn-group-toggle justify-content-center d-flex flex-wrap" data-toggle="buttons">
+          <label class="btn btn-sm btn-primary active">
+            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
+          </label>
+          {{ $categories := slice }}
+          {{ range .Data.Pages }}
+          {{ range .Params.categories }}
+          {{ $categories = $categories | append . }}
+          {{ end }}
+          {{ end }}
+          {{ range ( $categories | uniq ) }}
+          <label class="btn btn-sm btn-primary">
+            <input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . | humanize }}
+          </label>
+          {{ end }}
         </div>
       </div>
-       <div class="columns">
-            <div class="column is-narrow">
-                {{ partial "widgets/pagination.html" . }}
-            </div>
-        </div>
+    </div>
+    <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Research</h2>
+    <div class="row shuffle-wrapper mb-2">
+
+      {{ range .Paginator.Pages }}
+      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
+       
+
+         {{ partial "widgets/post-card.html"  .}}
+        
       </div>
+      {{ end }}
+    </div>
+  </div>
 </section>
-
-
 {{ end }}

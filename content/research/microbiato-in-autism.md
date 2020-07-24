@@ -12,7 +12,7 @@ images:
 draft: false
 ---
 
-{{< figure src="/images/research/microbiato-autism.png" >}}
+
 
 Role of gut microbiota in autism
 The Autism project is first of its kind, where in, hybrid modeling technique has been incorporated, integrating steady-state modeling (i.e., COBRA) and semi-detailed kinetic modeling methods (i.e., physiology based pharmacokinetic model, PBPK).
