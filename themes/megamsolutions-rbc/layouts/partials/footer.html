@@ -3,14 +3,18 @@
   <div class="footer__box">
     <div class="container-fluid">
       <div class="row justify-content-sm-around">
-        <div class="col-md-4">          
+        <div class="col-md-3">          
           <img src="{{ .Site.Params.logo | absURL }}" class="footer__img" alt="logo footer">
           <p class="footer__text">
-            The Robert Bosch Centre for Data Science and Artificial Intelligence (RBC-DSAI) was founded in August 2017, in IIT Madras with a vision to expand and further the research, education and outreach activities in the areas of Data Science and Artificial Intelligence.
+            Founded in August 2017, with a vision to become an internationally renowned centre for data science research, where long-standing fundamental research problems, cutting across disciplines, are targeted and solved.
           </p>
-          <p class="footer__text">
-            RBC-DSAI comprises faculty from several departments across the Institute, who carry out research in various areas of data science and artificial intelligence. The long-term vision of RBC-DSAI is to become a world leader in data science research, where long-standing fundamental research problems, cutting across disciplines, are targeted and solved.
-          </p>
+          <div class="footer__social-icons">
+            <a href="https://twitter.com/rbc_dsai_iitm" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/rbcdsai/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/rbcdsai" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/rbcdsai/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href=" https://www.youtube.com/channel/UCKaYqGvmULmTrN0PH5YPFcA  " class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
         <div class="col-md-2 col-sm-4">
           <h5 class="footer__heading">Useful Links</h5>
@@ -44,7 +48,6 @@
       </div>
     </div>
   </div>
- 
   <div class="footer__bottom">
     <p class="footer__bottom-copy">{{ .Site.Params.copyright | markdownify }}</p>
   </div>

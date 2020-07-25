@@ -1,221 +1,162 @@
-.card-flip {
-  // FUNCTIONALITY
-  perspective: 150rem;
-  -moz-perspective: 150rem;
+.card__news {
+  // width: 22rem;
+  height: 32rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: all 0.3s;
+  border-bottom: 3px solid $color-primary;
+  padding-bottom: 2rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+ margin: 2rem;
+
+  &-img {
+    height: 12rem;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  &-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &-cta {
+    padding: 1.25rem;
+    align-self: flex-end;
+  }
+
+  &-icons {
+    padding: 1rem;
+    i {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      color: $color-primary-light;
+    }
+
+    span {
+      margin-right: 0.25rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card__newsletter {
+  cursor: pointer;
   position: relative;
-  height: 52rem;
+  height: 6rem;
+  padding-bottom: 2rem;
+  transition: transform 0.6s ease;
+  --offset-multiplier: 0.3rem;
+  --translate: 0;
+  transform: translate(var(--translate), var(--translate));
 
-  &__side {
-    height: 52rem;
-    transition: all 0.8s ease;
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &:hover {
+    --offset-multiplier: .4rem;
+    --translate: calc(1px * 4);
+    transition: transform 0.3s ease;
+  }
+  .child {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    &--front {
-      background-color: $color-white;
+    height: 100%;
+    padding: 0 1rem;
+    background-color: $color-grey-light-1;
+    box-shadow: 0 4px 8px rgba($color-black, 0.1), 0px -4px 8px rgba($color-white, 0.8);
+    border-radius: 0.5rem;
+    transition: inherit;
+    --translate: calc(var(--offset) * var(--offset-multiplier));
+    transform: translate(var(--translate), var(--translate));
+    z-index: 5;
+
+    &:nth-child(1) {
+      --offset: 0;
+      z-index: 4;
     }
-    &--back {
-      transform: rotateY(180deg);
-      &-1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        );
-      }
-      &-2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        );
-      }
-      &-3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        );
-      }
+    &:nth-child(2) {
+      --offset: 1;
+      z-index: 3;
+    }
+    &:nth-child(3) {
+      --offset: 2;
+      z-index: 2;
+    }
+    &:nth-child(4) {
+      --offset: 3;
+      z-index: 1;
+    }
+    &:nth-child(5) {
+      --offset: 4;
+      z-index: 0;
     }
   }
 
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__side--back {
-    transform: rotateY(0deg);
-  }
-
-  //FRONT SIDE STYLING
-  &__picture {
-    background-size: cover;
-    height: 23rem;
-    background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-    &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        ),
-        url(../img/nat-5.jpg);
-    }
-
-    &--2 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        ),
-        url(../img/nat-6.jpg);
-    }
-
-    &--3 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        ),
-        url(../img/nat-7.jpg);
+  &--color1 {
+    .child {
+      background-color: $color-newsletter-1;
+      color: $color-grey-light-1;
     }
   }
 
-  &__heading {
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: right;
-    color: $color-white;
-    position: absolute;
-    top: 12rem;
-    right: 2rem;
-    width: 75%;
-  }
-
-  &__heading-span {
-    padding: 1rem 1.5rem;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-secondary-light, 0.85),
-        rgba($color-secondary-dark, 0.85)
-      );
-    }
-    &--2 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.85),
-        rgba($color-primary-dark, 0.85)
-      );
-    }
-    &--3 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-tertiary-light, 0.85),
-        rgba($color-tertiary-dark, 0.85)
-      );
+  &--color2 {
+    .child {
+      background-color: $color-newsletter-2;
+      color: $color-grey-light-1;
     }
   }
 
-  &__details {
-    padding: 3rem;
-
-    ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto;
-
-      li {
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 1rem;
-
-        &:not(:last-child) {
-          border-bottom: 1px solid $color-grey-light-2;
-        }
-      }
+  &--color3 {
+    .child {
+      background-color: $color-newsletter-3;
+      color: $color-grey-light-1;
     }
   }
 
-  //BACK SIDE STYLING
-  &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center;
+  &--color4 {
+    .child {
+      background-color: $color-newsletter-4;
+      color: $color-grey-light-1;
+    }
   }
 
-  &__price-box {
-    text-align: center;
-    color: $color-white;
-    margin-bottom: 8rem;
+  &--color5 {
+    .child {
+      background-color: $color-newsletter-5;
+      color: $color-grey-light-1;
+    }
   }
 
-  &__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-  }
-
-  &__price-value {
-    font-size: 6rem;
-    font-weight: 100;
-  }
-
-  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
-    // FUNCTIONALITY
-    height: auto;
-    border-radius: 3px;
-    background-color: $color-white;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
-    &__side {
-      height: auto;
-      position: relative;
-      box-shadow: none;
-
-      &--back {
-        transform: rotateY(0deg);
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-      }
-    }
-
-    &:hover &__side--front {
-      transform: rotateY(0deg);
-    }
-
-    &__details {
-      padding: 1rem 3rem;
-    }
-    //BACK SIDE STYLING
-    &__cta {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: translate(0);
-      width: 100%;
-      padding: 7rem 4rem 4rem 4rem;
-    }
-
-    &__price-box {
-      margin-bottom: 3rem;
-    }
-
-    &__price-value {
-      font-size: 4rem;
+  &--color6 {
+    .child {
+      background-color: $color-newsletter-6;
+      color: $color-grey-light-1;
     }
   }
 }

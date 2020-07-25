@@ -2,15 +2,17 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{- partial "head.html" . -}}
   <body>
-  	
-  	
+    <header class="header-section">
     {{- partial "header.html" . -}} 
-    <main>
-    	<div>
-    		{{- partial "preloader.html" . -}}
-    	</div>
-      {{- block "main" . -}}{{- end }} 
-    </main>
-    {{- partial "footer.html" . -}}
+    <div class="main-content">
+      <main>
+      <div>
+        {{- partial "preloader.html" . -}}
+      </div>
+       {{- block "main" . -}}{{- end }} 
+      </main>
+      {{- partial "footer.html" . -}}
+    </div>
+    </header>    
   </body>
 </html>

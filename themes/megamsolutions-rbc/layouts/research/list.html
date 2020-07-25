@@ -1,12 +1,15 @@
 {{ define "main" }}
 
-<section class="research-section overflow-hidden mt-4">
-	<div class="container">
-  	<div class="hero-text">
-    <h5 class="btn btn--animated">Research</h5>
-    {{ partial "widgets/Breadcrumb.html" }}
-  </div>
+<section class="section-hero-news hero hero--news">
+  <div class="hero-breadcrumb">
+  <div class="carousel__item--heading text-center">Research</div>
+  <ul class="hero-breadcrumb-list">
+    <li><a href="/"><i class="fas fa-home"></i></a></li>
+    <li><a href="#"><i class="fas fa-newspaper"></i> {{ .Title }}</a></li>
+  </ul>
+</div>
 </section>
+<!---shuffle used for cayegories filter--->
 <section class="section mt-4">
   <div class="container">
     <div class="row mb-5">
@@ -31,13 +34,9 @@
     </div>
     <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Research</h2>
     <div class="row shuffle-wrapper mb-2">
-
       {{ range .Paginator.Pages }}
       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
-       
-
-         {{ partial "widgets/post-card.html"  .}}
-        
+       {{ partial "widgets/post-card.html"  .}}
       </div>
       {{ end }}
     </div>

@@ -4,7 +4,8 @@
   //   rgba($color-black, 0.9),
   //   $color-grey-dark-2
   // );
-  background-color: $color-grey-dark-3;
+  // background-image: url('/images/footer.jpg');
+  background-color: $color-main;
   color: $color-grey-light-2;
 
   &__box {
@@ -66,7 +67,7 @@
     padding: 0.2rem;
     font-size:  1.2rem;
     &:not(:last-child) {
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.2rem;
     }
     
   }
@@ -104,9 +105,34 @@
   }
 
   &__text {
-    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
     line-height: 2rem;
   }
 
+  &__social-icons {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .social-link {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #000;
+    transition: all 0.2s;
+
+    &:link,
+    &:visited {
+      color: $color-grey-dark-2;
+    }
+
+    &:hover {
+      color: $color-grey-light-1;
+    }
+  }
   
 }

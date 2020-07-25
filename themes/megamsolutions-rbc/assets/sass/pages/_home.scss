@@ -1,14 +1,10 @@
 .hero-section {
-  margin-top: 4rem;
-  background-image: linear-gradient(
-      rgba($color-grey-dark-2, 0.8),
-      rgba($color-grey-dark-3, 0.8)
-    ),
-    url('../images/hero-1.jpg');
+  // margin-top: 4rem;
+  background-image: linear-gradient(rgba($color-main, 0.6), rgba($color-main-light, 0.6)), url('../images/hero-3.jpg');
   background-size: cover;
   background-position: center top;
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
 
   &__parallax {
     position: absolute;
@@ -18,7 +14,7 @@
 }
 
 .hero__shape {
-  overflow: hidden;  
+  overflow: hidden;
   display: inline-block;
 
   img {
@@ -85,4 +81,46 @@
 .shape-12 {
   top: 19rem !important;
   left: 52rem !important;
+}
+
+.section-news-event {
+  background-color: $color-grey-light-1;
+}
+
+.section-links {
+  .links {
+    &-list {
+      list-style: none;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $color-grey-dark-2;
+      ul {
+        margin-left: 2rem;
+      }
+    }
+    
+    &-link {
+      margin: 0.5rem 0;
+      i {
+        padding: 0.5rem;
+      }
+    }
+
+    &-link a {
+      display: inline-block;
+      transition: all 0.3s ease;
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-font-primary;
+        // border-bottom: 1px solid $color-font-primary;
+      }
+
+      &:hover {
+        background-color: $color-font-primary;
+        color: $color-grey-light-1;
+        transform: translateY(-2px);
+      }
+    }
+  }
 }

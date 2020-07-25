@@ -28,7 +28,7 @@
     <div class="hero__shape shape-3" data-depth="0.10">
       <img src="{{`images/illustrations/zeta.png` | relURL }}" alt="zeta" />
     </div>
-    
+
     <div class="hero__shape shape-4" data-depth="0.15">
       <img
         src="{{`images/illustrations/epsilon.png` | relURL }}"
@@ -64,98 +64,237 @@
     </div>
   </div>
 </section>
-<section class="section-event u-margin-bottom-medium">
+<section class="section-links">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="text-center mb-4">
+          <h2
+            class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+          >
+            Links
+          </h2>
+        </div>
+        <div class="links">
+          <ul class="links-list">
+            <li class="links-link">
+              <a href="https://rbcdsai.iitm.ac.in/HTML/html_NEW.html">RBCDSAI Post Doctoral Fellowship<i class="fas fa-link"></i></a>
+            </li>
+            <li class="links-link">
+              <a href="https://rbcdsai.iitm.ac.in/covid19/">RBCDSAI - Responding to COVID-19<i class="fas fa-link"></i></a>
+            </li>
+            <li class="links-link">
+              <a href="https://github.com/RBC-DSAI-IITM/DCEIL">DCEIL, the first Distributed Community Detection Algorithm.<i class="fas fa-link"></i></a>
+              </li>
+            <li class="links-link">
+              System For Scheduling of Piped Water Networks
+              <ul class="links-list">
+                <li class="links-link"><a href="http://10.21.184.209:8080/scheduler/">IITM Campus Users<i class="fas fa-link"></i></a></li>
+                <li class="links-link"><a href="http://14.139.160.87:8080/scheduler/">Others<i class="fas fa-link"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-news-event u-margin-bottom-medium u-margin-top-medium">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
-        <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">News</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <img src="https://source.unsplash.com/random/200x100" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">News</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
-              </div>
-            </div>            
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <img src="https://source.unsplash.com/random/200x100" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">News</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
-              </div>
-            </div> 
-          </div>
+        <div class="text-center mb-4">
+          <h2
+            class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+          >
+            News
+          </h2>
         </div>
-         <div class="row mt-5">
+        <div class="row">
+          {{ with .Site.Data.homepage.news }} 
+          {{ range .items}}
           <div class="col-md-6">
-            <div class="card">
-              <img src="https://source.unsplash.com/random/220x100" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">News</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
+            <div class="card card__news">
+              <img
+                src="{{.image}}"
+                alt=""
+                class="card-img-top card__news-img"
+              />
+              <div class="card__news-icons">
+                <i class="fas fa-newspaper"></i><span>{{.newsprovider}}</span>
+                <i class="fas fa-calendar"></i
+                ><span>{{ dateFormat "Jan 2, 2006" .date }}</span>
               </div>
-            </div>            
+              <div class="card-body">
+                <h5 class="card-title card__news-header">{{.title}}</h5>
+                <p class="card-text">{{.summary | truncate 120}}</p>
+              </div>
+              <div class="card__news-cta">
+                <a class="btn-text btn-text--small" href="{{.link}}"
+                  >Read &rarr;</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <div class="card">
-              <img src="https://source.unsplash.com/random/220x100" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">News</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque velit error neque accusamus asperiores odit quibusdam quidem, est atque quas autem dignissimos sit, reiciendis quia rerum, officiis ipsum tenetur!</p>
-              </div>
-            </div> 
+          {{ end }} 
+          {{ end }}
+          <div class="text-right w-100 mb-5 mr-5">
+            <a href="{{ `news` | absURL}}" class="btn btn--red-outline-small"
+              >View more news</a
+            >
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Events</h2>
-          <div class="main-timeline1">
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">10 Jul 2020, 2:00 PM</span>
-              <div class="timeline-content">
-                <h3 class="title">Workshop</h3>
-                <p class="description">
-                  Seventh RBCDSAI Workshop on Recent Progress in Data Science and AI
-                </p>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center mb-4">
+              <h2
+                class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+              >
+                Newsletter
+              </h2>
+            </div>
+            <div class="row d-flex justify-content-around">
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color1">
+                  <div class="child">
+                    <a href="pdf/Q1_News_Letter.pdf">Q1 2020</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color2">
+                  <div class="child">
+                    <a href="pdf/Q4-2019-News.pdf">Q4 2019</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color3">
+                  <div class="child">
+                    <a href="pdf/Q3-2019-News.pdf">Q3 2019</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
               </div>
             </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">18th Jun 2020, 2:15 PM</span>
-              <div class="timeline-content">
-                <h3 class="title">Summit</h3>
-                <p class="description">
-                  International Summit on Data Science & AI
-                </p>
+            <div class="row d-flex justify-content-around mt-5">
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color4">
+                  <div class="child">
+                    <a href="pdf/Q2-2019-News.pdf">Q2 2019</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color5">
+                  <div class="child">
+                    <a href="pdf/Q1-2019-News.pdf">Q1 2019</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card__newsletter card__newsletter--color6">
+                  <div class="child">
+                    <a href="pdf/Q4-2018-News.pdf">Q4 2018</a>
+                  </div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                  <div class="child"></div>
+                </div>
               </div>
             </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">12th Jun 2020, 5:00 PM</span>
-              <div class="timeline-content">
-                <h3 class="title">Seminar</h3>
-                <p class="description">
-                  RBCDSAI AImpact Seminar Series
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-center mb-4">
+            <h2
+              class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+            >
+              Events
+            </h2>
+          </div>
+          <div class="timeline js-timeline-slider">
+            {{ $pages := where .Site.RegularPages "Section" "events"}}
+            {{ range $pages.GroupByDate "2006"}}
+            <div class="timeline-item">
+              <div class="timeline-year"><span>{{.Key}}</span></div>
+            </div>
+            {{ range .Pages }}
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content js--fadeInLeft">
+                <!-- <div class="timeline-img-header">
+                  <img src="{{.Params.img}}" alt="" class="timeline-img-content" />
+                </div> -->
+                <div class="date">{{ .Date.Format "02 Jan 2006, 3:04 PM"}}</div>
+                <h2 class="timeline-header">{{.Title | markdownify}}</h2>
+                <p>
+                  <i class="fas fa-map-marker-alt timeline-icon"></i>
+                  {{.Params.venue | markdownify}}
                 </p>
+                <a class="title" href="{{ .Permalink }}">More</a>
               </div>
             </div>
-            <div class="timeline">
-              <span class="timeline-icon"></span>
-              <span class="year">30th Jan 2020, 9:00 AM</span>
-              <div class="timeline-content">
-                <h3 class="title">Symposium</h3>
-                <p class="description">
-                  India|EMBO Symposium - Engineering meets evolution: Designing biological systems ICSR Auditorium, IIT Madras
-                </p>
-              </div>
+            {{ end }} 
+            {{ end }}
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
-
+<section class="section-publication">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center mb-4">
+          <h2
+            class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+          >
+            Recent Publications
+          </h2>
+        </div>
+      </div>
+      <div class="col-md-12"></div>
+    </div>
+  </div>
+</section>
+<section class="section-govt">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center mb-4">
+          <h2
+            class="heading-secondary u-margin-top-medium u-margin-bottom-medium"
+          >
+            Government and Industry Collaborators
+          </h2>
+        </div>
+      </div>
+      <div class="col-md-12"></div>
+    </div>
+  </div>
+</section>
 {{ end }}

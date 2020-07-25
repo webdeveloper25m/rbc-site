@@ -1,54 +1,45 @@
-*, *::before, *::after {
+/* The research-single-section  image */
+/* Place text in the middle of the image */
+* {
+  box-sizing: border-box;
+  &::before {
     box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
 }
-
-
-
-/* The hero image */
 .research-single-section {
-   margin:0rem;
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba($color-grey-dark-2, 0.8),
-      rgba($color-grey-dark-3, 0.8)), url('../images/hero-1.jpg');
-
-  /* Set a specific height */
-   width:100vw;
-   height:40vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position:center;
+  margin: 0rem;
+  background-image: linear-gradient(rgba($color-grey-dark-2, 0.8), rgba($color-grey-dark-3, 0.8)), url('../images/hero-1.jpg');
+  width: 100vw;
+  height: 40vh;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
-
-/* Place text in the middle of the image */
 .hero-text {
-  text-align:left;
+  text-align: left;
   position: absolute;
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size:3rem;
-  font-weight:700;
+  font-size: 3rem;
+  font-weight: 700;
   letter-spacing: 0.2rem;
 }
-
-.fig-image{
-  max-width:100%;
+.fig-image {
+  max-width: 100%;
 }
-
-.article-text{
-  font-family:sans-serif;
-  font-size:2rem;
+.article-text {
+  font-family: sans-serif;
+  font-size: 2rem;
 }
-
-
-.social-icons{
-   margin:1rem;
+.social-icons {
+  margin: 1rem;
 }
-
 .icon-bar {
   position: fixed;
   top: 40%;
@@ -56,31 +47,18 @@
   -ms-transform: translateY(50%);
   transform: translateY(50%);
   flex-direction: column;
+  a {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    padding: 18px;
+    transition: all 0.3s ease;
+    color: black;
+    border-radius: 50%;
+    &:hover {
+      background-color: #55ACEE;
+      text-decoration: none;
+    }
+  }
 }
-
-
-.icon-bar a {
-  
-  text-align: center;
-  margin-bottom: 1rem;
-  display: block;
-  text-align: center;
-  padding: 18px;
-  transition: all 0.3s ease;
-  color: black;
-  border-radius: 50%;
-  
-
-}
-
-.icon-bar a:hover {
-  background-color: #55ACEE;
-  text-decoration: none;
-}
-
-
-
-
-
-
-

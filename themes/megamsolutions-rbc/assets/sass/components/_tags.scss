@@ -4,33 +4,27 @@ i.fa {
   box-shadow: 0px 0px 2px #888;
   padding: 0.5em 0.6em;
   background-color: #00BFFF;
-  color:$color-white;
-  margin:7px;
+  color: $color-white;
+  margin: 7px;
   font-size: 10px;
   text-align: center;
   text-decoration: none;
 }
-
-.tag{
-  font-size:1.25rem;
-  font-weight:700;
-  text-decoration:none;
+.tag {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
 }
-
-.tag-link{
-   font-size:1.5rem;
-  font-weight:700;
-  text-decoration:none;
+.tag-link {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: red;
+  }
 }
-  
-
-.tag-link:hover{
- text-decoration:none;
- color:red;
-}
-
-.social-icon{
-  
+.social-icon {
   padding: 10px;
   font-size: 15px;
   width: 50px;
@@ -39,4 +33,3 @@ i.fa {
   text-decoration: none;
   border-radius: 50%;
 }
-
