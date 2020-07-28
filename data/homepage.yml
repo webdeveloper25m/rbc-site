@@ -50,16 +50,16 @@ news:
     
     - title: "IIT Madras projects aim to reduce dropouts, improve learning"
       newsprovider: "The Economic Times"
-      summary: ""
+      summary: "Researchers at IIT Madras are working on two projects that use artificial intelligence and data analytics to improve learning outcomes for students."
       date: "2019-10-26"
       latest: false
       image: "/images/news/news4.jpg"
       link: "https://economictimes.indiatimes.com/industry/services/education/iit-m-projects-aim-to-reduce-dropouts-improve-learning/articleshow/72233977.cms"
 
     - title: "Data Science for Cricket"
-      newsprovider: "The Economic Times"
-      summary: ""
+      newsprovider: "ACM Datascience"
+      summary: "Data Science, ML, AI are the flavors of the season all over the world and India is no exception. Interest in these techniques is at a fever pitch; academicians and industrial practitioners alike are exploring the fundamental underpinnings and application potential of these techniques. As a result, data science is being evaluated for implementation in all imaginable fields and sub-fields. Sports is one such area with tremendous potential for data science applications."
       date: "2019-10-26"
       latest: false
       image: "/images/news/news4.jpg"
-      link: "https://economictimes.indiatimes.com/industry/services/education/iit-m-projects-aim-to-reduce-dropouts-improve-learning/articleshow/72233977.cms"
+      link: "https://acm-datascience-blog.blogspot.com/2019/11/data-science-for-cricket.html"

@@ -50,25 +50,8 @@
       .timeline-content {
         float: right;
         text-align: left;
-        // padding: 4.2rem 2.5rem 1rem 2.5rem;
-
-        .date {
-          // right: auto;
-          // left: 0;
-          // text-align: left;
-        }
-
-        &::after {
-          content: '';
-          // position: absolute;
-          // border-style: solid;
-          // width: 0;
-          // height: 0;
-          // top: 2.5rem;
-          // left: -1.2rem;
-          // border-width: 1rem 1.2rem 1rem 0;
-          // border-color: transparent $color-white transparent transparent;
-        }
+        padding-left: 4.5rem;
+        animation-name: bounceInRight; 
       }
     }
   }
@@ -114,11 +97,6 @@
   }
 
   &-item {
-    .timeline-img-header {
-      //background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
-      // url('https://picsum.photos/1000/800/?random') center center no-repeat;
-      // background-size: cover;
-    }
     .timeline-img-content {
       object-fit: cover;
       width: 100%;
@@ -129,27 +107,11 @@
 
   &-content {
     position: relative;
-    width: 40%;
-    // padding: 4.2rem 2rem 1rem 1rem;
+    width: 48%;
     text-align: right;
+    padding-right: 4.5rem;
     border-radius: 0.5rem;
-    // background: $color-white;
-    // box-shadow: 0 0.5rem 2rem rgba($color-black, 0.1);
     margin: 0 1rem;
-    // overflow: hidden;
-
-    &::after {
-      // content: '';
-      // position: absolute;
-      // border-style: solid;
-      // width: 0;
-      // height: 0;
-      // top: 2.5rem;
-      // right: -1.2rem;
-      // border-width: 1rem 0 1rem 1.2rem;
-      // border-color: transparent transparent transparent $color-white;
-      // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    }
 
     a {
       background: $color-timeline-5;
@@ -218,11 +180,6 @@
     color: $color-white;
     padding: 10px;
     border-radius: 0.5rem;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // float: right;
-    // border-radius: 6px;
   }
 
   &__prev,
@@ -260,12 +217,12 @@
   }
   &__prev {
     top: -5rem;
-    left: 0%;
+    left:35%;
   }
 
   &__next {
     top: -5rem;
-    left: 8%;
+    left: 57%;
   }
 
   .slick-slider,

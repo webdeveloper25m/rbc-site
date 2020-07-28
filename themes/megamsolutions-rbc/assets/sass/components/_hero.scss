@@ -8,9 +8,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: $color-grey-light-2;
+    color: $color-grey-light-1;
+    backface-visibility: hidden;
+    
     &-list {
       list-style: none;
       display: inline-block;
@@ -20,7 +22,7 @@
         a {
           color: inherit;
           display: block;
-          background-color: $color-grey-dark-1;
+          background-color: $color-main-light;
           text-decoration: none;
           text-align: center;
           padding: 1rem 1.5rem;
@@ -33,7 +35,7 @@
             content: '';
             position: absolute;
             top: 0;
-            border: 0 solid $color-grey-dark-1;
+            border: 0 solid $color-main-light;
             border-width: 3rem 2rem;
             width: 0;
             height: 0;
@@ -46,16 +48,16 @@
           &:after {
             left: 100%;
             border-color: transparent;
-            border-left-color: $color-grey-dark-1;
+            border-left-color: $color-main-light;
           }
           &:hover {
-            background-color: $color-grey-dark-2;
+            background-color: $color-main-dark;
             &:before {
-              border-color: $color-grey-dark-2;
+              border-color: $color-main-dark;
               border-left-color: transparent;
             }
             &:after {
-              border-left-color: $color-grey-dark-2;
+              border-left-color: $color-main-dark;
             }
           }
         }

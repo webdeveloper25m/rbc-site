@@ -5,10 +5,13 @@
     <header class="header-section">
     {{- partial "header.html" . -}} 
     <div class="main-content">
-      <main>
-      <div>
-        {{- partial "preloader.html" . -}}
+      <a href="#" class="sidebar-collapse">
+         <i class="fas fa-bars"></i>
+      </a>
+      <div class="mobile__header">
+        <img src="{{ .Site.Params.logo | absURL }}" alt="{{.Site.Title}}" class="mobile__logo">
       </div>
+      <main>
        {{- block "main" . -}}{{- end }} 
       </main>
       {{- partial "footer.html" . -}}

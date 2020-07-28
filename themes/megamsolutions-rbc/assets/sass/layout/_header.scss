@@ -50,7 +50,7 @@
         bottom: 0;
         height: 2px;
         width: 0%;
-        display: none;
+        display: block;
         transition: all 0.3s ease-in-out;
         background-color: transparent;
       }
@@ -114,8 +114,34 @@
   align-items: stretch;
   width: 100%;
 
+  .sidebar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    font-size: 2.3rem;
+    width: 4rem;
+    height: 4rem;
+    color: $color-grey-light-1;
+    background-color: rgba($color-main, 0.8);
+    z-index: 10;
+
+    i {
+      padding: 1rem;
+    }
+  }
+
+  .mobile__logo {
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin: 1rem;
+    z-index: 10;
+  }
   .sidebar {
-    width: 22rem;
+    width: 14rem;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -128,7 +154,7 @@
     // ),
     // url('../images/hero-2.jpg');
     color: $color-grey-light-1;
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &.active {
       width: 6rem;
@@ -141,10 +167,21 @@
     &__logo {
       height: 5rem;
       transition: all 0.3s;
-
+      // display: none;
       &:hover {
         transform: scale(1.1);
       }
+    }
+    &__close {
+      display: none;
+      cursor: pointer;
+      // display: block;
+      text-align: right;
+      font-size: 3rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1rem;
     }
 
     &__icon {
@@ -166,7 +203,7 @@
           font-weight: 400;
           font-size: 1.2rem;
           text-transform: uppercase;
-          color: #000;
+          color: $color-grey-dark-1;
           padding: 0.5rem 0;
           backface-visibility: hidden;
           transition: all 0.2s;
@@ -246,14 +283,69 @@
         color: $color-grey-light-1;
       }
     }
+
+    &.sidebar-collapsed {
+      width: 6rem;
+      .sidebar__header {
+        padding: 0.4rem;
+      }
+      .sidebar__logo {
+        height: 3rem;
+      }
+      .sidebar__social-icons {
+        text-align: center;
+        padding: 0;
+      }
+      .sidebar__nav {
+        .nav-item {
+          margin-bottom: 0.5rem;
+        }
+        .nav-link {
+          font-size: 1.5rem;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      &.sidebar-close {
+        left: -20rem;
+      }
+
+      &.sidebar-open {
+        .sidebar__close {
+          display: block;
+        }
+      }
+    }
   }
 
   .main-content {
-    width: calc(100% - 15rem);
+    margin-left: 14rem;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
     top: 0;
     right: 0;
+    transition: all 0.5s;
+  }
+
+  .sidebar.sidebar-collapsed + .main-content {
+    margin-left: 6rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .sidebar.sidebar-close + .main-content,
+    .sidebar.sidebar-open + .main-content, {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1199px) {
+    .mobile__header {
+      display: none;
+    }
   }
 }

@@ -2,6 +2,9 @@
   color: $color-grey-light-1;
   position: relative;
   padding: 20rem 0;
+  overflow: hidden; 
+  min-width: 80%; 
+  width: 0;
 
   &__item {
     padding: 2rem;

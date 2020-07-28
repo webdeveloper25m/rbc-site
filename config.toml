@@ -1,9 +1,9 @@
-baseURL = "https://test-rbc-site.netlify.app"
+baseURL = "https://rbc-dsai.megamsolutions.com"
 languageCode = "en-us"
 title = "RBC-DSAI"
 theme = "megamsolutions-rbc"
 paginate = 20
-summaryLength=5
+summaryLength=15
 
 ############################## navigation ###############################
 
@@ -75,7 +75,6 @@ weight = 10
   tag = "tags"
   category="categories"
 
-
 #################### default parameters ################################
 [params]
 main_menu = "Home"
@@ -89,6 +88,7 @@ address = "5th floor, Block II, Bhupat and Jyoti Mehta School of Biosciences, In
 google_analitycs_id = "Your ID"
 # copyright
 copyright = "Robert Bosch Center for Data Science and Artificial Intelligence | IIT Madras &copy; 2020"
+
 
 # Preloader
 [params.preloader]

@@ -3,7 +3,7 @@
 THIS PAGE USED TO SHOW CARD COMPONENT WHICH IS USED IN RESEARCH LIST AND SINGLE PAGE,etc..
 --->
 {{ $permalink := .Permalink }}
-  <div class="card-deck mt-5">
+ <div class="wow bounceInUp mt-5" data-wow-duration="2.4s" style="visibility: visible; animation-duration: 2.4s; animation-name: bounceInUp;">
   <div class="card card__news">
     {{ with .Params.images }}
       <a href="{{ $permalink }}"><img src="{{ index . 0 }}"  alt="" class="card-img-top card__news-img"></a>

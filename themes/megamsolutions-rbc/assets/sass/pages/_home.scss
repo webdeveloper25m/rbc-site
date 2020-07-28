@@ -1,6 +1,10 @@
 .hero-section {
   // margin-top: 4rem;
-  background-image: linear-gradient(rgba($color-main, 0.6), rgba($color-main-light, 0.6)), url('../images/hero-3.jpg');
+  background-image: linear-gradient(
+      rgba($color-main, 0.6),
+      rgba($color-main-light, 0.6)
+    ),
+    url('../images/hero-3.jpg');
   background-size: cover;
   background-position: center top;
   position: relative;
@@ -98,7 +102,7 @@
         margin-left: 2rem;
       }
     }
-    
+
     &-link {
       margin: 0.5rem 0;
       i {
@@ -122,5 +126,15 @@
         transform: translateY(-2px);
       }
     }
+  }
+}
+
+.section-collaborators {
+  background-color: $color-grey-light-1;
+  .collab-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

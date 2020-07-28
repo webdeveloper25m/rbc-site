@@ -41,11 +41,48 @@ $(window).on('load', function () {
   var scene = document.getElementById('parallax');
   if (scene) var parallaxInstance = new Parallax(scene);
 
-  // hero-slider
+  // Initiate the wowjs animation library
+  new WOW().init();
+
+  // Back to top button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $('.back-to-top').fadeIn('slow');
+    } else {
+      $('.back-to-top').fadeOut('slow');
+    }
+  });
+
+  $('.back-to-top').click(function () {
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      1500,
+      'easeInOutExpo'
+    );
+    return false;
+  });
+
+  $('.sidebar-collapse').click(function () {
+    if ($('#sidebar').hasClass('sidebar-close')) {
+      $('.sidebar').addClass('sidebar-open');
+      $('.sidebar').removeClass('sidebar-close');
+    } else {
+      $('.sidebar').toggleClass('sidebar-collapsed');
+    }
+  });
+
+  $('.sidebar__close').click(function () {
+    $('.sidebar').addClass('sidebar-close');
+    $('.sidebar').removeClass('sidebar-open');
+  });
+
+  //hero-slider
   $('.js-hero-slider').slick({
     dots: true,
     infinite: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     fade: false,
     arrows: true,
@@ -54,7 +91,6 @@ $(window).on('load', function () {
     nextArrow:
       "<button type='button' class='carousel__next'><i class='fas fa-chevron-right'></i></button>",
     autoplay: true,
-
     accessibility: true,
   });
 
@@ -129,3 +165,32 @@ $(window).on('load', function () {
     });
   }
 })(jQuery);
+
+// Collapsed Sidebar (min-width:992px) and (max-width: 1199px)
+$(function () {
+  'use strict';
+
+  var mql = window.matchMedia('(min-width:768px) and (max-width: 1199px)');
+  var mql_hide = window.matchMedia('(max-width: 767px)');
+
+  function doMinimize(e) {
+    if (e.matches) {
+      $('.sidebar').addClass('sidebar-collapsed');
+    } else {
+      $('.sidebar').removeClass('sidebar-collapsed');
+    }
+  }
+
+   function doHide(e) {
+     if (e.matches) {
+       $('.sidebar').addClass('sidebar-close');
+     } else {
+       $('.sidebar').removeClass('sidebar-close');
+     }
+   }
+
+  mql.addListener(doMinimize);
+  mql_hide.addListener(doHide);
+  doMinimize(mql);
+  doHide(mql_hide);
+});

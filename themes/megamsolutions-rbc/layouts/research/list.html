@@ -19,12 +19,12 @@
             <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
           </label>
           {{ $categories := slice }}
-          {{ range .Data.Pages }}
-          {{ range .Params.categories }}
+          {{ range sort .Data.Pages }}
+          {{ range sort .Params.categories }}
           {{ $categories = $categories | append . }}
           {{ end }}
           {{ end }}
-          {{ range ( $categories | uniq ) }}
+          {{ range sort ( $categories | uniq ) }}
           <label class="btn btn-sm btn-primary">
             <input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . | humanize }}
           </label>
@@ -34,9 +34,9 @@
     </div>
     <h2 class="heading-secondary u-margin-top-medium u-margin-bottom-medium">Research</h2>
     <div class="row shuffle-wrapper mb-2">
-      {{ range .Paginator.Pages }}
+      {{ range  .Paginator.Pages }}
       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
-       {{ partial "widgets/post-card.html"  .}}
+       {{ partial  "widgets/post-card.html"  .}}
       </div>
       {{ end }}
     </div>

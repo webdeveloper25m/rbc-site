@@ -1,20 +1,24 @@
 <!-- footer -->
-<footer class="footer u-margin-top-medium">
+<footer class="footer">
   <div class="footer__box">
     <div class="container-fluid">
       <div class="row justify-content-sm-around">
-        <div class="col-md-3">          
-          <img src="{{ .Site.Params.logo | absURL }}" class="footer__img" alt="logo footer">
-          <p class="footer__text">
-            Founded in August 2017, with a vision to become an internationally renowned centre for data science research, where long-standing fundamental research problems, cutting across disciplines, are targeted and solved.
-          </p>
-          <div class="footer__social-icons">
-            <a href="https://twitter.com/rbc_dsai_iitm" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/rbcdsai/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.facebook.com/rbcdsai" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/rbcdsai/" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href=" https://www.youtube.com/channel/UCKaYqGvmULmTrN0PH5YPFcA  " class="social-link"><i class="fab fa-youtube"></i></a>
-          </div>
+        <div class="col-md-3">     
+          <div class="footer__content">
+            <div class="footer__logo">
+              <img src="{{ .Site.Params.logo | absURL }}" class="footer__img" alt="logo footer">
+            </div>
+            <p class="footer__text">
+              Founded in August 2017, with a vision to become an internationally renowned centre for data science research, where long-standing fundamental research problems, cutting across disciplines, are targeted and solved.
+            </p>
+            <div class="footer__social-icons">
+              <a href="https://twitter.com/rbc_dsai_iitm" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/rbcdsai/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/rbcdsai" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/rbcdsai/" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href=" https://www.youtube.com/channel/UCKaYqGvmULmTrN0PH5YPFcA  " class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>     
         </div>
         <div class="col-md-2 col-sm-4">
           <h5 class="footer__heading">Useful Links</h5>
@@ -53,8 +57,15 @@
   </div>
 </footer>
 <!-- /footer -->
+<a href="#" class="back-to-top">
+  <i class="fa fa-chevron-up"></i>
+</a>
+
 {{ $jquery := resources.Get "js/jquery.min.js" }}
 <script src="{{$jquery.Permalink}}"></script>
+
+{{ $jquery_ease := resources.Get "js/jquery.easing.min.js" }}
+<script src="{{$jquery_ease.Permalink}}"></script>
 
 {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
 <script src="{{$bootstrap.Permalink}}"></script>

@@ -48,8 +48,9 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-main: #150928;
-$color-main-dark: darken($color-main, 20%);
-$color-main-light: lighten($color-main, 20%);
+$color-main-dark: #0f071d;
+$color-main-light: #220f41;
+$color-main-light-transparent: rgba($color-main, 0.8);
 
 // FONT
 $default-font-size: 1.6rem;
